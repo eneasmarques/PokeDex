@@ -1,7 +1,21 @@
 :root {
-    --color-grass: #98cba2;
-    --color-fire: #cb9898;
     --color-water: #98b4cb;
+    --color-fire: #d17777;
+    --color-grass: #98cba2;
+    --color-electric: #FFFF00;
+    --color-ice: #E0FFFF;
+    --color-fighting: #D35400;
+    --color-poison: #9D38BD;
+    --color-ground: #D2B48C;
+    --color-flying: #87CEFA;
+    --color-psychic: #FF9D38;
+    --color-bug: #A9A9A9;
+    --color-rock: #BDB76B;
+    --color-ghost: #D3D3D3;
+    --color-dragon: #FFFF00;
+    --color-dark: #333333;
+    --color-steel: #B8860B;
+    --color-fairy: #FFE4E1;
 }
 
 .content {
@@ -34,7 +48,7 @@
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
-    background: var(--color-grass);
+    background: none;
     color: #fff;
 }
 
