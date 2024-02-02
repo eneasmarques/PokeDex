@@ -47,6 +47,7 @@
     flex-direction: column;
     margin: .5rem;
     padding: 1rem;
+    padding-bottom: 0;
     border-radius: 1rem;
     background: none;
     color: #fff;
@@ -73,7 +74,10 @@
 }
 
 .pokemons .detail img {
+    position: relative;
     width: 7.5rem;
+    bottom: -.6rem;
+    height: 100%;
 }
 
 li {
