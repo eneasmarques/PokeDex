@@ -5,25 +5,21 @@ pokeApi.getPokemons().then((pokemons = []) => {
   setPokemonBackgroundColor();
 });
 
-function convertPokemonTypesToLi(pokemonTypes = []) {
-  return pokemonTypes.map(
-    (slotType) => `<li class="type">${slotType.type.name}</li>`
-  );
-}
-
 function convertPokemonListToLi(pokemon) {
   return `
-        <li class="pokemon ">
-            <span class="number">#${pokemon.order
+        <li class="pokemon">
+            <span class="number">#${pokemon.number
               .toString()
               .padStart(3, "0")}</span>
             <span class="name">${pokemon.name}</span>
 
             <div class="detail">
             <ol class="types">
-                ${convertPokemonTypesToLi(pokemon.types).join("")}
+                ${pokemon.types
+                  .map((type) => `<li class="type">${type}</li>`)
+                  .join("")}
             </ol>
-            <img src="${pokemon.sprites.other.dream_world.front_default}"
+            <img src="${pokemon.photo}"
                 alt="${pokemon.name}" />
             </div>
         </li>
