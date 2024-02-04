@@ -166,12 +166,13 @@ li {
     justify-content: flex-start;
     flex-wrap: nowrap;
     flex-direction: column;
+    filter: brightness(1.1);
 }
 
 .types .type {
     font-size: 14px;
     width: min-content;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     padding: 0.4rem 0.8rem;
     margin: 0.2rem 0;
     text-align: center;
