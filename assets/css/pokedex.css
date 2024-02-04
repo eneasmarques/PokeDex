@@ -99,8 +99,13 @@
     margin: 0 auto;
 }
 
+.content img {
+    height: 18rem;
+}
+
 .content h1 {
     font-size: 5rem;
+    margin-top: 0.1rem;
     color: #474747;
     text-align: center;
 }
@@ -108,6 +113,7 @@
 .pokemons {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
     margin: 0;
     list-style: none;
