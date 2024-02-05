@@ -9,20 +9,45 @@ function loadMorePokemonItens(offset, limit) {
     const newHtml = pokemons
       .map((pokemon) => {
         return `
-          <li class="pokemon ${pokemon.type}">
-              <span class="number">#${pokemon.number
-                .toString()
-                .padStart(3, "0")}</span>
-              <span class="name">${pokemon.name}</span>
+          <li class="pokemon">
+              <div class="card ${pokemon.type}">
+                  <span class="number">#${pokemon.number
+                    .toString()
+                    .padStart(3, "0")}</span>
+                  <span class="name">${pokemon.name}</span>
 
-              <div class="detail">
-              <ol class="types">
-                  ${pokemon.types
-                    .map((type) => `<li class="type ${type}">${type}</li>`)
-                    .join("")}
-              </ol>
-              <img src="${pokemon.photo}"
-                  alt="${pokemon.name}" />
+                  <div class="detail">
+                  <ul class="types">
+                      ${pokemon.types
+                        .map((type) => `<li class="type ${type}">${type}</li>`)
+                        .join("")}
+                  </ul>
+                  <img src="${pokemon.photo}"
+                      alt="${pokemon.name}" />
+                  </div>
+
+                  <div class="pokemon-ability-info">
+                    <ul>
+                          <li>
+                            <span class="atribute-title">Height</span>
+                            <span class="atribute-value">${
+                              pokemon.height
+                            }m</span>
+                          </li>
+                          <li>
+                            <span class="atribute-title">Weight</span>
+                            <span class="atribute-value">${
+                              pokemon.weight
+                            }Kg</span>
+                          </li>
+                          <li>
+                            <span class="atribute-title">Ability</span>
+                            <span class="atribute-value">${
+                              pokemon.ability
+                            }</span></span>
+                          </li>
+                    </ul>                    
+                  </div>
               </div>
           </li>`;
       })

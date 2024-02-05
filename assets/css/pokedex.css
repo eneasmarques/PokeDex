@@ -102,38 +102,58 @@
 }
 
 .pokemons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     padding: 0;
     margin: 0;
     list-style: none;
+    position: relative;
 }
 
 .pokemon {
     width: 15rem;
+    height: 13rem;
     display: flex;
     flex-direction: column;
     margin: .5rem;
+    color: #fff;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 13rem;
+    position: absolute;
     padding: 1rem;
     padding-bottom: 0;
     border-radius: 1rem;
-    color: #fff;
+    overflow: hidden;
+
+    transition: all .5s;
 }
 
-.pokemons .name {
+.card:hover,
+.card:target,
+.card:focus {
+    height: 27rem;
+    z-index: 100;
+}
+
+.card .name {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     text-transform: capitalize;
 }
 
-.pokemons .number {
+.card .number {
     color: rgba(0, 0, 0, 0.2);
     font-weight: 700;
     text-align: right;
 }
 
-.pokemons .detail {
+.card .detail {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -142,10 +162,9 @@
     align-items: self-start;
 }
 
-.pokemons .detail img {
+.card .detail img {
     position: relative;
     width: 7.5rem;
-    bottom: -.6rem;
     height: 100%;
 }
 
@@ -162,12 +181,50 @@ li {
 }
 
 .types .type {
-    font-size: 14px;
+    font-size: .875rem;
     width: min-content;
     padding: 0.4rem 0.8rem;
     margin: 0.2rem 0;
     text-align: center;
     border-radius: 2rem;
+}
+
+.pokemon-ability-info {
+    margin-top: 2rem;
+}
+
+.pokemon-ability-info ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pokemon-ability-info li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.pokemon-ability-info ul li:nth-last-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.atribute-title {
+    font-weight: 300;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.atribute-value {
+    font-size: .875rem;
+    width: min-content;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-transform: capitalize;
 }
 
 .pagination {
